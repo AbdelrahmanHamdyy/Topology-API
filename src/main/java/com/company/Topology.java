@@ -52,16 +52,16 @@ public class Topology {
         Device device = new Device();
         String type, deviceName = "";
         type = (String) Obj.get("type");
-        if (type.equals("resistor")) {
+
+        if (type.equals("resistor"))
             deviceName = "resistance";
-        }
-        else if (type.equals("nmos")) {
+        else if (type.equals("nmos"))
             deviceName = "m(1)";
-        }
+
         JSONObject deviceObj = (JSONObject) Obj.get(deviceName);
-        /* double def = (double) deviceObj.get("default");
-        double min = (double) deviceObj.get("min");
-        double max = (double) deviceObj.get("max"); */
+        // double def = (double) deviceObj.get("default");
+        // double min = (double) deviceObj.get("min");
+        // double max = (double) deviceObj.get("max");
         if (type.equals("resistor"))
             device = new Resistor(deviceName, 100, 10, 1000);
         else if (type.equals("nmos"))

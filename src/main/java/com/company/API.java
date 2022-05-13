@@ -53,8 +53,11 @@ public class API {
 
     public void writeJSON(String ID) {
         try (FileWriter file = new FileWriter(ID + ".json")) {
-            file.write(Memory.get(ID).getJson().toJSONString());
-            file.flush();
+            Topology T = Memory.get(ID);
+            if (T != null) {
+                file.write(T.getJson().toJSONString());
+                file.flush();
+            }
         } catch (IOException e) {
             System.out.println("Error (IOException)");
             e.printStackTrace();
@@ -73,13 +76,19 @@ public class API {
     }
 
     public List<Component> queryDevices(String ID) {
-        return Memory.get(ID).getComponentList();
+        Topology T = Memory.get(ID);
+        if (T != null)
+            return Memory.get(ID).getComponentList();
+        else
+            return null;
     }
 
     public List<Component> queryDevicesWithNetlistNode(String ID, String node) {
-        System.out.println(Memory.get(ID).getNodes());
         HashMap<String, List<Component>> nodes = Memory.get(ID).getNodes();
-        return nodes.get(node);
+        if (nodes != null)
+            return nodes.get(node);
+        else
+            return null;
     }
 
 }

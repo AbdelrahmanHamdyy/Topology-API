@@ -1,9 +1,6 @@
 package com.company;
 
-import java.util.List;
-import java.util.Locale;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
 
@@ -11,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner Input = new Scanner(System.in);
-        System.out.println("********************* TOPOLOGY API *********************");
+        System.out.println("\n********************* TOPOLOGY API *********************\n");
         // Main Loop
         while (true) {
             int option = 0;
@@ -35,7 +32,6 @@ public class Main {
                     String file = Input.next();
                     app.readJson(file);
                     break;
-
                 case 2:
                     System.out.println("Topology ID: ");
                     ID = Input.next();
@@ -44,7 +40,10 @@ public class Main {
                 case 3:
                     System.out.println("Topologies: ");
                     Set<String> Topologies = app.getTopologies();
-                    System.out.println(Topologies);
+                    if (Topologies.isEmpty())
+                        System.out.println("No Topologies Found!");
+                    else
+                        System.out.println(Topologies);
                     break;
                 case 4:
                     System.out.println("Topology ID: ");
@@ -64,15 +63,25 @@ public class Main {
                     System.out.println("Topology ID: ");
                     ID = Input.next();
                     List<Component> devices = app.queryDevices(ID);
-                    for (Component comp : devices)
-                        comp.print();
+                    if (devices != null) {
+                        for (Component comp : devices)
+                            comp.print();
+                    }
+                    else
+                        System.out.println("Topology Not Found!");
                     break;
                 case 6:
                     System.out.println("Topology ID: ");
                     ID = Input.next();
                     System.out.println("Node: ");
                     String node = Input.next();
-                    System.out.println(app.queryDevicesWithNetlistNode(ID, node));
+                    List<Component> nodes =  app.queryDevicesWithNetlistNode(ID, node);
+                    if (nodes != null) {
+                        for (Component comp : nodes)
+                            comp.print();
+                    }
+                    else
+                        System.out.println("Topology/Node Not Found!");
                     break;
                 case 7:
 
