@@ -57,9 +57,9 @@ class Device {
     // Print as a virtual Function
 
     public void print() {
-        System.out.println("----> Device Name: " + name);
-        System.out.println("----> Default = " + defaultValue);
-        System.out.println("----> Min = " + min);
-        System.out.println("----> Max = " + max);
+        System.out.println("Device Name: " + name);
+        System.out.println("Default = " + defaultValue);
+        System.out.println("Min = " + min);
+        System.out.println("Max = " + max);
     }
 }

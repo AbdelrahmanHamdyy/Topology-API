@@ -1,6 +1,7 @@
 package com.company;
 
 import jdk.swing.interop.SwingInterOpUtils;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.List;
@@ -69,12 +70,13 @@ public class Component {
 
     public void print() {
         System.out.println("Component: ");
-        System.out.println("Type: " + deviceType);
         System.out.println("ID: " + id);
+        deviceType.print();
+        System.out.println("Netlist: ");
         for (Map.Entry<String, String> entry : netList.entrySet()) {
-            System.out.println("\"" + entry.getKey() + "\":" + "\"" + entry.getValue() + "\"");
+            System.out.println("\"" + entry.getKey() + "\": " + "\"" + entry.getValue() + "\"");
         }
-        System.out.println("-------------------------------------");
+        System.out.println();
     }
 
 }

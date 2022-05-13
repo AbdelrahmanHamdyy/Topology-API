@@ -12,7 +12,7 @@ class Resistor extends Device {
 
     @Override
     public void print() {
-        System.out.println("----> Device Type: Resistance");
+        System.out.println("Device Type: Resistance");
         super.print();
     }
 }

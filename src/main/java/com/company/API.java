@@ -1,10 +1,17 @@
 package com.company;
 
 import org.jetbrains.annotations.NotNull;
-import org.json.JSONObject;
 
+import org.json.simple.JSONObject;
+import org.json.simple.parser.ParseException;
+import org.json.simple.parser.JSONParser;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Set;
 
 public class API {
 
@@ -18,19 +25,61 @@ public class API {
         return Memory;
     }
 
+    public Set<String> getTopologies() {
+        return Memory.keySet();
+    }
+
     public void setMemory(HashMap<String, Topology> memory) {
         Memory = memory;
     }
 
-    public void addToMemory(@NotNull String id, Topology NewTopology) {
+    public void addToMemory(@NotNull JSONObject json) {
+        String id = (String) json.get("id");
+        List<JSONObject> objectList = (List<JSONObject>) json.get("components");
+        Topology NewTopology = new Topology(id, objectList, json);
         Memory.put(id, NewTopology);
     }
 
-    public void readJson(@NotNull JSONObject json) {
-        String id = (String) json.get("id");
-        List<JSONObject> objectList = (List<JSONObject>) json.get("components");
-        Topology topology = new Topology(id, objectList, json);
-        addToMemory(id, topology);
+    public void readJson(String file) {
+        JSONParser jsonParser = new JSONParser();
+        try (FileReader reader = new FileReader(file)) {
+            //Read JSON file
+            JSONObject obj = (JSONObject) jsonParser.parse(reader);
+            addToMemory(obj);
+        } catch (IOException | ParseException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void writeJSON(String ID) {
+        try (FileWriter file = new FileWriter(ID + ".json")) {
+            file.write(Memory.get(ID).getJson().toJSONString());
+            file.flush();
+        } catch (IOException e) {
+            System.out.println("Error (IOException)");
+            e.printStackTrace();
+        } catch (NullPointerException e){
+            System.out.println("Key not found");
+            e.printStackTrace();
+        }
+    }
+
+    public boolean deleteTopology(String ID) {
+        if (Memory.containsKey(ID)) {
+            Memory.remove(ID);
+            return true;
+        }
+        return false;
+    }
+
+    public List<Component> queryDevices(String ID) {
+        return Memory.get(ID).getComponentList();
+    }
+
+    public List<Component> queryDevicesWithNetlistNode(String ID, String node) {
+        System.out.println(Memory.get(ID).getNodes());
+        HashMap<String, List<Component>> nodes = Memory.get(ID).getNodes();
+        return nodes.get(node);
     }
 
 }
