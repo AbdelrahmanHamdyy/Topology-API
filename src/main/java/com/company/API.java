@@ -51,12 +51,13 @@ public class API {
         }
     }
 
-    public void writeJSON(String ID) {
+    public boolean writeJSON(String ID) {
         try (FileWriter file = new FileWriter(ID + ".json")) {
             Topology T = Memory.get(ID);
             if (T != null) {
                 file.write(T.getJson().toJSONString());
                 file.flush();
+                return true;
             }
         } catch (IOException e) {
             System.out.println("Error (IOException)");
@@ -65,6 +66,7 @@ public class API {
             System.out.println("Key not found");
             e.printStackTrace();
         }
+        return false;
     }
 
     public boolean deleteTopology(String ID) {

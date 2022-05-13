@@ -2,10 +2,10 @@ package com.company;
 
 class Device {
 
-    private String name;
-    private double defaultValue;
-    private double min;
-    private double max;
+    protected String name;
+    protected double defaultValue;
+    protected double min;
+    protected double max;
 
     Device(String Name, double defaultVal, double Min, double Max) {
         setName(Name);

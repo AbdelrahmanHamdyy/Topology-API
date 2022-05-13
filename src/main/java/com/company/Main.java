@@ -35,7 +35,9 @@ public class Main {
                 case 2:
                     System.out.println("Topology ID: ");
                     ID = Input.next();
-                    app.writeJSON(ID);
+                    boolean flag = app.writeJSON(ID);
+                    if (flag)
+                        System.out.println("Successfully wrote ");
                     break;
                 case 3:
                     System.out.println("Topologies: ");
@@ -52,7 +54,7 @@ public class Main {
                     confirm = Input.next();
                     confirm = confirm.toLowerCase(Locale.ROOT);
                     if (confirm.equals("y")) {
-                        boolean flag = app.deleteTopology(ID);
+                        flag = app.deleteTopology(ID);
                         if (flag)
                             System.out.println("Successfully Deleted!");
                         else
@@ -84,7 +86,8 @@ public class Main {
                         System.out.println("Topology/Node Not Found!");
                     break;
                 case 7:
-
+                    Testing Test = new Testing(app);
+                    Test.testAll();
                     break;
                 case 8:
                     System.out.println("Exiting..");
