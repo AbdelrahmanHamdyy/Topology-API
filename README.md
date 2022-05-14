@@ -4,7 +4,9 @@
 
 </div>
 
+<div align="center">
 ![alt text](https://github.com/abdelrahman0123/Topology-API/blob/main/screenshots/task2.jpg)
+</div>
 
 Provide the functionality to access, manage and store device topologies.
 
@@ -36,6 +38,8 @@ This class contains the memory of the API as a HashMap and an addToMemory functi
   * boolean deleteTopology(String topologyID)
   * List<Component> queryDevices(String topologyID)
   * List<Component> queryDevicesWithNetlistNode(String topologyID, String node)
+
+* Each functionality is validated completely in case a topology/node is not found for example, etc...
 
 #### Topology
 
