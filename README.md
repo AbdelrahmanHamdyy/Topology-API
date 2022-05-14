@@ -3,9 +3,10 @@
 <img src="https://github.com/abdelrahman0123/Topology-API/blob/main/screenshots/task2.jpg" alt="Task 2">
 </div>
 
-Provide the functionality to access, manage and store device topologies.
+# 📙 About
+An API library which provides the functionality to access, manage and store device topologies.
 
-# Description
+# 📝 Description
 1. Read a topology from a given JSON file and store it in the memory.
 2. Write a given topology from the memory to a JSON file.
 3. Query about which topologies are currently in the memory.
@@ -19,7 +20,7 @@ a given topology.
 
 <img src="screenshots/API.png" alt="Class Hierarchy">
 
-# Getting Started
+# 🏁 Getting Started
 
 ## Classes
 ### Main
@@ -79,13 +80,13 @@ an nmos or a pmos transistor and overrides the print function as well
 * Maven Framework Support
 * json.simple
 
-### Installing
+## 💻 Installing
 
 ```
 git clone https://github.com/abdelrahman0123/Topology-API 
 ```
 
-### Screenshots
+## 📷 Screenshots
 
 #### Query Topologies
 <img src="screenshots/1.jpg" alt="1" height="600" width="700">
