@@ -4,7 +4,7 @@
 
 </div>
 
-![alt text](https://github.com/abdelrahman0123/Topology-API/screenshots/task2.jpg)
+![alt text](https://github.com/abdelrahman0123/Topology-API/blob/main/screenshots/task2.jpg)
 
 Provide the functionality to access, manage and store device topologies.
 
