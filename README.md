@@ -88,7 +88,7 @@ git clone https://github.com/abdelrahman0123/Topology-API
 ### Screenshots
 
 #### Query Topologies
-<img src="screenshots/1.jpg" alt="1" height="300">
+<img src="screenshots/1.jpg" alt="1" height="600">
 
 #### Read JSON file & Query Topologies
 ![start](screenshots/2.jpg)
