@@ -5,7 +5,7 @@
 </div>
 
 <div align="center">
-![alt text](https://github.com/abdelrahman0123/Topology-API/blob/main/screenshots/task2.jpg)
+<img src="https://github.com/abdelrahman0123/Topology-API/blob/main/screenshots/task2.jpg" alt="Task 2">
 </div>
 
 Provide the functionality to access, manage and store device topologies.
