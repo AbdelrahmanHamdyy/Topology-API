@@ -15,6 +15,7 @@ import java.util.Set;
 
 public class API {
 
+    // Main Memory of Topologies
     private HashMap<String, Topology>  Memory;
 
     API() {
@@ -25,12 +26,12 @@ public class API {
         return Memory;
     }
 
-    public Set<String> getTopologies() {
-        return Memory.keySet();
-    }
-
     public void setMemory(HashMap<String, Topology> memory) {
         Memory = memory;
+    }
+
+    public Set<String> getTopologies() {
+        return Memory.keySet();
     }
 
     public void addToMemory(@NotNull JSONObject json) {
@@ -40,12 +41,13 @@ public class API {
         Memory.put(id, NewTopology);
     }
 
-    public void readJson(String file) {
+    public boolean readJson(String file) {
         JSONParser jsonParser = new JSONParser();
         try (FileReader reader = new FileReader(file)) {
             //Read JSON file
             JSONObject obj = (JSONObject) jsonParser.parse(reader);
             addToMemory(obj);
+            return true;
         } catch (IOException | ParseException e) {
             throw new RuntimeException(e);
         }

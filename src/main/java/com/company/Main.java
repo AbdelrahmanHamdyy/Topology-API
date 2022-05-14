@@ -25,77 +25,82 @@ public class Main {
             System.out.println("(7) Sample Tests");
             System.out.println("(8) Exit");
             System.out.println("--------------------------------------------------------");
+            System.out.print("Choice: ");
             option = Input.nextInt(); // Get input
-            switch(option) {
-                case 1:
+            switch (option) {
+                case 1 -> {
                     System.out.println("Enter File Name: ");
                     String file = Input.next();
-                    app.readJson(file);
-                    break;
-                case 2:
+                    boolean flag = app.readJson(file);
+                    if (flag)
+                        System.out.println("Successfully read file " + file);
+                    else
+                        System.out.println("Error in Read");
+                }
+                case 2 -> {
                     System.out.println("Topology ID: ");
                     ID = Input.next();
                     boolean flag = app.writeJSON(ID);
                     if (flag)
-                        System.out.println("Successfully wrote ");
-                    break;
-                case 3:
+                        System.out.println("Successfully written to file " + ID + ".json");
+                    else
+                        System.out.println("Error in Write");
+                }
+                case 3 -> {
                     System.out.println("Topologies: ");
                     Set<String> Topologies = app.getTopologies();
                     if (Topologies.isEmpty())
                         System.out.println("No Topologies Found!");
                     else
                         System.out.println(Topologies);
-                    break;
-                case 4:
+                }
+                case 4 -> {
                     System.out.println("Topology ID: ");
                     ID = Input.next();
                     System.out.println("Are you sure you want to delete this topology? (y/n)");
                     confirm = Input.next();
                     confirm = confirm.toLowerCase(Locale.ROOT);
                     if (confirm.equals("y")) {
-                        flag = app.deleteTopology(ID);
+                        boolean flag = app.deleteTopology(ID);
                         if (flag)
                             System.out.println("Successfully Deleted!");
                         else
                             System.out.println("Deletion Failed!");
                     }
-                    break;
-                case 5:
+                }
+                case 5 -> {
                     System.out.println("Topology ID: ");
                     ID = Input.next();
                     List<Component> devices = app.queryDevices(ID);
                     if (devices != null) {
                         for (Component comp : devices)
                             comp.print();
-                    }
-                    else
+                    } else
                         System.out.println("Topology Not Found!");
-                    break;
-                case 6:
+                }
+                case 6 -> {
                     System.out.println("Topology ID: ");
                     ID = Input.next();
                     System.out.println("Node: ");
                     String node = Input.next();
-                    List<Component> nodes =  app.queryDevicesWithNetlistNode(ID, node);
+                    List<Component> nodes = app.queryDevicesWithNetlistNode(ID, node);
                     if (nodes != null) {
                         for (Component comp : nodes)
                             comp.print();
-                    }
-                    else
+                    } else
                         System.out.println("Topology/Node Not Found!");
-                    break;
-                case 7:
+                }
+                case 7 -> {
                     Testing Test = new Testing(app);
                     Test.testAll();
-                    break;
-                case 8:
-                    System.out.println("Exiting..");
                     return;
-                default:
-                    System.out.println("Invalid");
+                }
+                case 8 -> {
+                    System.out.println("\nExiting..");
+                    return;
+                }
+                default -> System.out.println("Invalid Option!");
             }
-            System.out.println("--------------------------------------------------------");
         }
     }
 }

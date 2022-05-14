@@ -21,6 +21,8 @@ class Device {
         setMax(0.0);
     }
 
+    // Setters
+
     public void setName(String name) {
         this.name = name;
     }
@@ -33,10 +35,11 @@ class Device {
         this.min = min;
     }
 
-
     public void setMax(double max) {
         this.max = max;
     }
+
+    // Getters
 
     public String getName() {
         return name;
@@ -54,7 +57,7 @@ class Device {
         return defaultValue;
     }
 
-    // Print as a virtual Function
+    // Print as a virtual Function (Polymorphism)
 
     public void print() {
         System.out.println("\tDevice Name: " + name);

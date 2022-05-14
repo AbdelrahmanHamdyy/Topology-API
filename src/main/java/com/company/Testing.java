@@ -21,8 +21,8 @@ public class Testing {
     }
 
     private void testReadJSON() {
-        app.readJson("topology.json");
-        if (!app.getMemory().isEmpty())
+        boolean read = app.readJson("topology.json");
+        if (!app.getMemory().isEmpty() && read)
             System.out.println("Reading from JSON File test Successful!");
         else
             System.out.println("Reading from JSON File test failed!");
@@ -76,8 +76,8 @@ public class Testing {
     }
 
     public void testAll() {
-        System.out.println("Testing Started..\n");
-        System.out.println("Testing on Topology");
+        System.out.println("\nTesting Started..\n");
+        System.out.println("Testing on Topology with ID \"top1\" and Netlist node \"n1\"");
         testReadJSON();
         testWriteJSON();
         testQueryTopologies();
@@ -86,5 +86,4 @@ public class Testing {
         testDeleteTopology();
         System.out.println("\nTesting Done\n");
     }
-
 }
