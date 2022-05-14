@@ -1,8 +1,3 @@
-<div align="center">
-
-# Topology API
-
-</div>
 
 <div align="center">
 <img src="https://github.com/abdelrahman0123/Topology-API/blob/main/screenshots/task2.jpg" alt="Task 2">
@@ -93,28 +88,28 @@ git clone https://github.com/abdelrahman0123/Topology-API
 ### Screenshots
 
 #### Query Topologies
-<img src="screenshots/1.jpg" alt="1" height="600" width="900">
+<img src="screenshots/1.jpg" alt="1" height="600" width="800">
 
 #### Read JSON file & Query Topologies
-<img src="screenshots/2.jpg" alt="2" height="600" width="900">
+<img src="screenshots/2.jpg" alt="2" height="600" width="800">
 
 #### Write JSON
-<img src="screenshots/3.jpg" alt="3" height="400" width="900">
+<img src="screenshots/3.jpg" alt="3" height="400" width="800">
 
 #### Delete a topology & Query Topologies
-<img src="screenshots/4.jpg" alt="4" height="600" width="900">
+<img src="screenshots/4.jpg" alt="4" height="600" width="800">
 
 #### Query devices in a topology
-<img src="screenshots/5.jpg" alt="5" height="600" width="900">
+<img src="screenshots/5.jpg" alt="5" height="600" width="800">
 
 #### Query devices with netlist node
-<img src="screenshots/6.jpg" alt="6" height="600" width="900">
+<img src="screenshots/6.jpg" alt="6" height="600" width="800">
  
 #### Exit
-<img src="screenshots/7.jpg" alt="7" height="400" width="900">
+<img src="screenshots/7.jpg" alt="7" height="400" width="800">
 
 #### Testing
-<img src="screenshots/8.jpg" alt="8" height="600" width="900">
+<img src="screenshots/8.jpg" alt="8" height="600" width="800">
 
 ## Contributors
 
