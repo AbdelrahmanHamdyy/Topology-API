@@ -94,7 +94,7 @@ git clone https://github.com/abdelrahman0123/Topology-API
 <img src="screenshots/2.jpg" alt="2" height="600">
 
 #### Write JSON
-<img src="screenshots/3.jpg" alt="3" height="600">
+<img src="screenshots/3.jpg" alt="3" height="400">
 
 #### Delete a topology & Query Topologies
 <img src="screenshots/4.jpg" alt="4" height="600">
@@ -106,7 +106,7 @@ git clone https://github.com/abdelrahman0123/Topology-API
 <img src="screenshots/6.jpg" alt="6" height="600">
  
 #### Exit
-<img src="screenshots/7.jpg" alt="7" height="600">
+<img src="screenshots/7.jpg" alt="7" height="400">
 
 #### Testing
 <img src="screenshots/8.jpg" alt="8" height="600">
