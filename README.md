@@ -95,16 +95,16 @@ git clone https://github.com/abdelrahman0123/Topology-API
 <img src="screenshots/2.jpg" alt="2" height="600" width="700">
 
 #### Write JSON
-<img src="screenshots/3.jpg" alt="3" height="400" width="700">
+<img src="screenshots/3.jpg" alt="3" height="300" width="700">
 
 #### Delete a topology & Query Topologies
 <img src="screenshots/4.jpg" alt="4" height="600" width="700">
 
 #### Query devices in a topology
-<img src="screenshots/5.jpg" alt="5" height="600" width="700">
+<img src="screenshots/5.jpg" alt="5" height="500" width="700">
 
 #### Query devices with netlist node
-<img src="screenshots/6.jpg" alt="6" height="600" width="700">
+<img src="screenshots/6.jpg" alt="6" height="500" width="700">
  
 #### Exit
 <img src="screenshots/7.jpg" alt="7" height="400" width="700">
