@@ -10,7 +10,7 @@
 
 Provide the functionality to access, manage and store device topologies.
 
-## Description
+# Description
 1. Read a topology from a given JSON file and store it in the memory.
 2. Write a given topology from the memory to a JSON file.
 3. Query about which topologies are currently in the memory.
@@ -19,15 +19,18 @@ Provide the functionality to access, manage and store device topologies.
 6. Query about which devices are connected to a given netlist node in
 a given topology.
 
-## Getting Started
 
-### Classes
-#### Main
+# Class Structure
+
+# Getting Started
+
+## Classes
+### Main
 
 * This class creates an object from the API class which is used to call each functionality
 * It contains the main loop of the API which allows the user to select which operation to perform
 
-#### API
+### API
 
 This class contains the memory of the API as a HashMap and an addToMemory function to store in it.
 
@@ -41,39 +44,39 @@ This class contains the memory of the API as a HashMap and an addToMemory functi
 
 * Each functionality is validated completely in case a topology/node is not found for example, etc...
 
-#### Topology
+### Topology
 
 * Each topology consists of components and the JSON format of the topology, 
 with a unique ID and all nodes between each component in the topology
  
-#### Nodes
+### Nodes
 
 * The Topology class creates an object from class Nodes in order to set
 its nodes and add to it any component in the topology
 
-#### Component
+### Component
 
 * Each component contains the ID and type of the component
 as well as the device details and the NetList
  
-#### Device
+### Device
 
 * This class contains the device details including it's name, default value , min and max
 
-#### Resistor
+### Resistor
  
 * The resistor inherits from class device and overrides function print() to add resistance as its type
  
-#### Transistor
+### Transistor
  
 * The transistor inherits from class device and has an extra variable (type) to indicate whether it's
 an nmos or a pmos transistor and overrides the print function as well
  
-#### Testing
+### Testing
 
 * This class tests each function of class API
 
-### Dependencies
+## Dependencies
 
 * Java
 * Maven Framework Support
