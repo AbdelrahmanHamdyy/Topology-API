@@ -46,7 +46,7 @@ This class contains the memory of the API as a HashMap and an addToMemory functi
   * List<Component> queryDevices(String topologyID)
   * List<Component> queryDevicesWithNetlistNode(String topologyID, String node)
 
-* Each functionality is validated completely in case a topology/node is not found for example, etc...
+* Each functionality is validated completely in case a topology/node not found for example, etc...
 
 ### Topology
 
