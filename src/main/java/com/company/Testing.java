@@ -1,5 +1,6 @@
 package com.company;
 
+import java.io.File;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Set;
@@ -30,7 +31,8 @@ public class Testing {
 
     private void testWriteJSON() {
         boolean write = app.writeJSON("top1");
-        if (write)
+        File file = new File("top1.json");
+        if (write && file.exists())
             System.out.println("Writing to JSON File test Successful!");
         else
             System.out.println("Writing to JSON File test failed!");
