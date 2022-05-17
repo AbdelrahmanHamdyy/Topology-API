@@ -2,10 +2,24 @@ package com.company;
 
 import java.util.*;
 
+/**
+ * The Main class is the application manager of the program.
+ * It contains the infinite loop which keeps running until the user exits.
+ * Otherwise he will choose between the functionalities to perform
+ * @author Abdelrahman Hamdy
+ * @version 1.0.0 May 17, 2022
+ */
 public class Main {
 
+    /**
+     * Object from the API class to call the API's functions
+     */
     private static final API app = new API();
 
+    /**
+     * Main function (Application Manager)
+     * @param args - Args
+     */
     public static void main(String[] args) {
         Scanner Input = new Scanner(System.in);
         System.out.println("\n********************* TOPOLOGY API *********************\n");
