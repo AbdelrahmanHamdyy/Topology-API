@@ -145,6 +145,8 @@ public class API {
      * @return a list containing the components connected
      */
     public List<Component> queryDevicesWithNetlistNode(String ID, String node) {
+        if(Memory.get(ID)==null)
+            return null;
         HashMap<String, List<Component>> nodes = Memory.get(ID).getNodes();
         if (nodes != null)
             return nodes.get(node);
