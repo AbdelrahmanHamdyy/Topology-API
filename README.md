@@ -85,6 +85,10 @@ an nmos or a pmos transistor and overrides the print function as well
 * Java
 * Maven Framework Support
 * json.simple
+ 
+## Documentation
+ 
+* Found in the index.html file inside the documentation folder
 
 ## 💻 Installing
 
