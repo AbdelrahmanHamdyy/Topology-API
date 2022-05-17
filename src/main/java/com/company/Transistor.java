@@ -6,7 +6,7 @@ package com.company;
  * @author Abdelrahman Hamdy
  * @version 1.0.0 May 17, 2022
  */
-class Transistor extends Device {
+public class Transistor extends Device {
 
     private String type;
     /**
