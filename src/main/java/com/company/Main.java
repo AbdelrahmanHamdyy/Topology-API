@@ -21,6 +21,15 @@ public class Main {
      * @param args - Args
      */
     public static void main(String[] args) {
+        Run();
+    }
+
+    /**
+     * This is the execution function of the whole API. It shows the main screen
+     * and prompts the user for input as his functionality choice. Then it calls
+     * the corresponding function from the API class.
+     */
+    public static void Run() {
         Scanner Input = new Scanner(System.in);
         System.out.println("\n********************* TOPOLOGY API *********************\n");
         // Main Loop
