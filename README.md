@@ -24,7 +24,11 @@ a given topology.
 
 # Class Structure
 
-<img src="screenshots/API.png" alt="Class Hierarchy">
+<img src="screenshots/API.png" alt="Class Structure">
+
+## Hierarchy
+
+<img src="screenshots/Hierarchy.jpeg" alt="Class Hierarchy">
 
 # 🏁 Getting Started
 
